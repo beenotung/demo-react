@@ -14,8 +14,8 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
-import Logo from './Logo';
-import Counter from './Counter';
+import Logo from './components/Logo/Logo';
+import Counter from './components/Counter/Counter';
 
 class App extends React.Component {
   render() {

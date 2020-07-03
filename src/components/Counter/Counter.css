@@ -1,0 +1,9 @@
+.Counter {
+    display: flex;
+    align-items: center;
+}
+
+.Counter ion-text {
+    font-size: 1.5em;
+    padding: 0.5em;
+}
