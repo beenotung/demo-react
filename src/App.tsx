@@ -3,6 +3,8 @@ import './App.css';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
 import {
+  IonCol,
+  IonRow,
   IonApp,
   IonCard,
   IonCardHeader,
@@ -49,16 +51,24 @@ class App extends React.Component {
             <Logo />
           </Card>
           <Card title="Counter">
-            <Counter />
-          </Card>
-          <Card title="Counter">
-            <Counter />
+            <IonRow>
+              <IonCol>
+                <Counter />
+              </IonCol>
+              <IonCol>
+                <Counter />
+              </IonCol>
+            </IonRow>
           </Card>
           <Card title="Score Board">
-            <ScoreBoard teamName="Team A" />
-          </Card>
-          <Card title="Score Board">
-            <ScoreBoard teamName="Team A" />
+            <IonRow>
+              <IonCol>
+                <ScoreBoard teamName="Team L" />
+              </IonCol>
+              <IonCol>
+                <ScoreBoard teamName="Team R" />
+              </IonCol>
+            </IonRow>
           </Card>
         </IonContent>
       </IonApp>
