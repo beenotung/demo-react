@@ -2,19 +2,25 @@ import React from 'react';
 import { IonButton, IonText } from '@ionic/react';
 import './Counter.css';
 
+const KEY = 'counter';
+
 export default class Counter extends React.Component {
   state = {
-    counter: 0,
+    counter: +localStorage.getItem(KEY)! || 0,
   };
 
   render() {
     return (
       <div className="Counter">
-        <IonButton onClick={() => this.decrement()}>+</IonButton>
+        <IonButton onClick={() => this.decrement()}>-</IonButton>
         <IonText>{this.state.counter}</IonText>
-        <IonButton onClick={() => this.increment()}>-</IonButton>
+        <IonButton onClick={() => this.increment()}>+</IonButton>
       </div>
     );
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem(KEY, this.state.counter.toString());
   }
 
   increment() {
