@@ -16,6 +16,18 @@ import {
 } from '@ionic/react';
 import Logo from './components/Logo/Logo';
 import Counter from './components/Counter/Counter';
+import ScoreBoard from './components/ScoreBoard/ScoreBoard';
+
+function Card(props: { title: string; children: any }) {
+  return (
+    <IonCard>
+      <IonCardHeader>
+        <IonCardTitle>{props.title}</IonCardTitle>
+      </IonCardHeader>
+      <IonCardContent>{props.children}</IonCardContent>
+    </IonCard>
+  );
+}
 
 class App extends React.Component {
   render() {
@@ -33,22 +45,21 @@ class App extends React.Component {
               <IonCardTitle>Running on React</IonCardTitle>
             </IonCardHeader>
           </IonCard>
-          <IonCard>
-            <IonCardHeader>
-              <IonCardTitle>Logo</IonCardTitle>
-            </IonCardHeader>
-            <IonCardContent>
-              <Logo />
-            </IonCardContent>
-          </IonCard>
-          <IonCard>
-            <IonCardHeader>
-              <IonCardTitle>Counter</IonCardTitle>
-            </IonCardHeader>
-            <IonCardContent>
-              <Counter />
-            </IonCardContent>
-          </IonCard>
+          <Card title="Logo">
+            <Logo />
+          </Card>
+          <Card title="Counter">
+            <Counter />
+          </Card>
+          <Card title="Counter">
+            <Counter />
+          </Card>
+          <Card title="Score Board">
+            <ScoreBoard teamName="Team A" />
+          </Card>
+          <Card title="Score Board">
+            <ScoreBoard teamName="Team A" />
+          </Card>
         </IonContent>
       </IonApp>
     );
