@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
 import {
   IonApp,
-  IonButton,
   IonCard,
   IonCardHeader,
   IonCardSubtitle,
@@ -16,11 +14,10 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
+import Logo from './Logo';
+import Counter from './Counter';
 
 class App extends React.Component {
-  state = {
-    counter: 0,
-  };
   render() {
     return (
       <IonApp>
@@ -35,24 +32,26 @@ class App extends React.Component {
               <IonCardSubtitle>Welcome to Ionic</IonCardSubtitle>
               <IonCardTitle>Running on React</IonCardTitle>
             </IonCardHeader>
+          </IonCard>
+          <IonCard>
+            <IonCardHeader>
+              <IonCardTitle>Logo</IonCardTitle>
+            </IonCardHeader>
             <IonCardContent>
-              <div className='App-logo-container'>
-                <img src={logo} className="App-logo" alt="ionic logo" />
-                The logo path: {logo}
-              </div>
-              <p>Counter: {this.state.counter}</p>
-              <IonButton onClick={() => this.increment()}>Increment</IonButton>
+              <Logo />
+            </IonCardContent>
+          </IonCard>
+          <IonCard>
+            <IonCardHeader>
+              <IonCardTitle>Counter</IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+              <Counter />
             </IonCardContent>
           </IonCard>
         </IonContent>
       </IonApp>
     );
-  }
-
-  increment() {
-    this.setState({
-      counter: this.state.counter + 1,
-    });
   }
 }
 
