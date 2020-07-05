@@ -9,11 +9,12 @@ import './ScoreBoard.css';
 function selectBoardState(state: RootState) {
   return state.scoreboard;
 }
+
 export interface ScoreBoardProps {
   teamName: string;
 }
 
-const ScoreBoard = (props: ScoreBoardProps) => {
+const ScoreBoard: React.FC<ScoreBoardProps> = (props: ScoreBoardProps) => {
   const state = useSelector(selectBoardState);
   const dispatch = useDispatch();
   return (

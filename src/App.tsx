@@ -47,10 +47,13 @@ class App extends React.Component {
               <IonCardTitle>Running on React</IonCardTitle>
             </IonCardHeader>
           </IonCard>
-          <Card title="Logo">
-            <Logo />
+          <Card title="Functional Component (Hooks)">
+            <IonRow>
+              <IonCol><Logo/></IonCol>
+              <IonCol><Logo/></IonCol>
+            </IonRow>
           </Card>
-          <Card title="Counter">
+          <Card title="Class Component (setState)">
             <IonRow>
               <IonCol>
                 <Counter />

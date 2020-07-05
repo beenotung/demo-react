@@ -4,10 +4,22 @@ import './Counter.css';
 
 const KEY = 'counter';
 
+function loadCounter() {
+  return +localStorage.getItem(KEY)! || 0;
+}
+
 export default class Counter extends React.Component {
   state = {
-    counter: +localStorage.getItem(KEY)! || 0,
+    counter: loadCounter(),
   };
+
+  handleUpdate = (event: StorageEvent) => {
+    console.log(event);
+    this.setState({
+      counter: loadCounter(),
+    });
+  };
+
 
   render() {
     return (
@@ -17,6 +29,14 @@ export default class Counter extends React.Component {
         <IonButton onClick={() => this.increment()}>+</IonButton>
       </div>
     );
+  }
+
+  componentDidMount() {
+    window.addEventListener('storage', this.handleUpdate);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('storage', this.handleUpdate);
   }
 
   componentDidUpdate() {
