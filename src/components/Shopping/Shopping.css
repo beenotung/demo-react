@@ -1,0 +1,10 @@
+.App-Shopping {
+  display: flex;
+}
+
+.App-Shopping > * {
+  flex-grow: 1;
+  outline: 1px solid black;
+  padding: 0.5em;
+  margin: 0.5em;
+}

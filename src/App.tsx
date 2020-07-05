@@ -19,6 +19,7 @@ import {
 import Logo from './components/Logo/Logo';
 import Counter from './components/Counter/Counter';
 import ScoreBoard from './components/ScoreBoard/ScoreBoard';
+import Shopping from './components/Shopping/Shopping';
 
 function Card(props: { title: string; children: any }) {
   return (
@@ -37,7 +38,7 @@ class App extends React.Component {
       <IonApp>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Home Page</IonTitle>
+            <IonTitle>Introduce Redux</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
@@ -47,13 +48,20 @@ class App extends React.Component {
               <IonCardTitle>Running on React</IonCardTitle>
             </IonCardHeader>
           </IonCard>
-          <Card title="Functional Component (Hooks)">
+          <Card title="Shared props">
+            <Shopping />
+          </Card>
+          <Card title="Hooks with DOM event">
             <IonRow>
-              <IonCol><Logo/></IonCol>
-              <IonCol><Logo/></IonCol>
+              <IonCol>
+                <Logo />
+              </IonCol>
+              <IonCol>
+                <Logo />
+              </IonCol>
             </IonRow>
           </Card>
-          <Card title="Class Component (setState)">
+          <Card title="setState with window event">
             <IonRow>
               <IonCol>
                 <Counter />
@@ -63,7 +71,7 @@ class App extends React.Component {
               </IonCol>
             </IonRow>
           </Card>
-          <Card title="Score Board">
+          <Card title="Using Redux">
             <IonRow>
               <IonCol>
                 <ScoreBoard teamName="Team L" />
