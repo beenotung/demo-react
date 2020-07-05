@@ -1,3 +1,13 @@
+# Introduction with Redux
+
+This repo shows how to share state between multiple components using:
+- [x] props
+- [x] dom event
+- [x] window event
+- [x] **redux**
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
