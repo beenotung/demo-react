@@ -1,3 +1,9 @@
+## Purpose
+
+This repo branch demostrate state management in React webapp with UseHook vs Redux
+
+## Template
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
