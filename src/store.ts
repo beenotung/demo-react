@@ -1,29 +1,30 @@
-import {Action, createStore} from "redux";
-import {IAction} from "./actions";
+import { Action, createStore } from "redux";
+import { IAction } from "./actions";
 
 export interface IRootState {
-    theNumber: number
+  loginTitle: string;
+  isOpen: boolean;
 }
 
 const initialState: IRootState = {
-    theNumber: 0
-}
+  loginTitle: "sales",
+  isOpen: false,
+};
 
-const rootReducer = (state: IRootState = initialState, action: IAction): IRootState => {
-    switch (action.type) {
-        case "add":
-            return {
-                ...state,
-                theNumber: state.theNumber + action.amount
-            }
-        case "reset":
-            return {
-                ...state,
-                theNumber: 0
-            }
-        default:
-            return state
-    }
-}
+const rootReducer = (
+  state: IRootState = initialState,
+  action: IAction
+): IRootState => {
+  switch (action.type) {
+    case "open":
+      return { ...state, isOpen: true };
+    case "close":
+      return { ...state, isOpen: false };
+    default:
+      return state;
+  }
+};
 
-export default createStore<IRootState, Action<IAction>, {}, {}>(rootReducer as any)
+export default createStore<IRootState, Action<IAction>, {}, {}>(
+  rootReducer as any
+);

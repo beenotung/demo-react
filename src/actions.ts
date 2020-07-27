@@ -1,12 +1,7 @@
-export type IAction = {
-    type: 'add'
-    // amount: number
-} | {
-    type: 'reset'
-}
-
-
-// export type IAction2 = {
-//     type: 'add' | 'reset'
-//     amount?: number
-// }
+export type IAction =
+  | {
+      type: "open";
+    }
+  | {
+      type: "close";
+    }
