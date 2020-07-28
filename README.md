@@ -1,6 +1,6 @@
 ## Purpose
 
-This repo branch demostrate state management in React webapp with UseHook vs Redux
+This repo branch demostrate state management in React webapp with **UseHook** vs **Redux** on **Functional Component** and **Class Component**
 
 ## Template
 
