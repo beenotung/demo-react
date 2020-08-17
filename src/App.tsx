@@ -10,8 +10,8 @@ function App() {
         <Provider store={store}>
             <div className="App">
                 <header className="App-header">
-                    <Counter/>
-                    <Counter/>
+                    <Counter step={1}/>
+                    <Counter step={2}/>
                 </header>
             </div>
         </Provider>

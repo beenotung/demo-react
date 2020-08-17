@@ -1,6 +1,6 @@
 export type IAction = {
     type: 'add'
-    // amount: number
+    amount: number
 } | {
     type: 'reset'
 }
